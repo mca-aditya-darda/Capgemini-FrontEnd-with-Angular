@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Form</legend>
+        <label for="text">Text</label>
+        <input placeholder="Text" type="text" id="text" /><br /><br />
+
+        <label for="number">Number</label>
+        <input placeholder="Number" type="number" id="number" /><br /><br />
+
+        <label for="phone">Phone</label>
+        <input placeholder="Phone" type="tel" id="phone" /><br /><br />
+
+        <label for="email">Email</label>
+        <input placeholder="Email" type="email" id="email" /><br /><br />
+
+        <label for="password">Password</label>
+        <input
+          placeholder="Password"
+          type="password"
+          id="password"
+        /><br /><br />
+
+        <label for="range">Range</label>
+        <input placeholder="Range" type="range" id="range" /><br /><br />
+
+        <label>Radio</label><br />
+        <input type="radio" id="Option 1" name="radio" value="Option 1" />
+        <label for="Option 1">Option 1</label>
+
+        <input type="radio" id="option2" name="radio" value="option2" />
+        <label for="option2">Option 2</label>
+        <br /><br />
+
+        <label for="checkbox">Checkbox</label>
+        <input
+          placeholder="Checkbox"
+          type="checkbox"
+          id="checkbox"
+        /><br /><br />
+
+        <label for="file">Upload File</label>
+        <input type="file" id="file" /><br /><br />
+
+        <label for="date">Select Date</label>
+        <input type="date" id="date" /><br /><br />
+
+        <label for="select">Select / Dropdown</label>
+        <select id="select">
+          <option value="o1">Option 1</option>
+          <option value="o2">Option 2</option>
+          <option value="o3">Option 3</option>
+        </select>
+        <br /><br />
+
+        <label for="select">Select / Dropdown - optGroup</label>
+        <select id="select">
+          <optgroup label="Group 1">
+            <option value="o1">Option 1</option>
+            <option value="o2">Option 2</option>
+          </optgroup>
+          <optgroup label="Group 2">
+            <option value="o3">Option 3</option>
+            <option value="o4">Option 4</option>
+          </optgroup>
+        </select>
+        <br /><br />
+
+        <textarea placeholder="textarea"></textarea><br /><br />
+
+        <input type="submit" value="Submit" /><br /><br />
+
+        <input type="reset" value="Reset" /><br /><br />
+      </fieldset>
+    </form>
+  </body>
+</html>
