@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      p {
+        color: darkblue;
+      }
+
+      .highlight {
+        background-color: yellow;
+      }
+
+      #main-title {
+        color: crimson;
+        font-size: 2em;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      h2,
+      h3 {
+        border-bottom: 2px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main-title">Simple Selectors</h1>
+
+    <h3>Element Selector</h3>
+    <p>All paragraphs are dark blue.</p>
+
+    <h3>Class Selector</h3>
+    <p class="highlight">This paragraph has a yellow background.</p>
+    <span class="highlight">This span is also highlighted.</span><br /><br />
+
+    <h3>ID Selector</h3>
+    <p>
+      The &lt;h1&gt; at the top uses <code>#main-title</code> — crimson, large.
+    </p>
+
+    <h3>Universal Selector</h3>
+    <p>
+      Applied <code>box-sizing: border-box</code> to every element on the page.
+    </p>
+
+    <h3>Grouping Selector</h3>
+    <h2>This h2 has a bottom border</h2>
+    <h3>This h3 also has a bottom border</h3>
+  </body>
+</html>

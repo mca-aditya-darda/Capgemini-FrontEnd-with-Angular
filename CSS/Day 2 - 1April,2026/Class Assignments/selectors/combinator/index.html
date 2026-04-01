@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      .box p {
+        color: blue;
+      }
+
+      .parent > p {
+        background-color: lightgreen;
+      }
+
+      h3 + p {
+        color: red;
+      }
+
+      h3 ~ p {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Combinator Selectors</h1>
+
+    <h3>Descendant ( space )</h3>
+    <div class="box">
+      <p>Direct child p — blue</p>
+      <div><p>Nested p inside div — also blue</p></div>
+    </div>
+    <br />
+
+    <h3>Child ( &gt; )</h3>
+    <div class="parent">
+      <p>Direct child p — green bg</p>
+      <div><p>Nested p — NOT green</p></div>
+    </div>
+    <br />
+
+    <h3>Adjacent Sibling ( + )</h3>
+    <p>First p right after h3 — red</p>
+    <p>Second p — not red</p>
+    <br />
+
+    <h3>General Sibling ( ~ )</h3>
+    <p>First p after h3 — underlined</p>
+    <p>Second p after h3 — also underlined</p>
+  </body>
+</html>

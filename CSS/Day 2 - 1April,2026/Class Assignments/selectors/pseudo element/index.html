@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      p.before-demo::before {
+        content: "👉 ";
+      }
+
+      p.after-demo::after {
+        content: " ✅";
+      }
+
+      p.first-letter {
+        font-size: 16px;
+      }
+      p.first-letter::first-letter {
+        font-size: 3em;
+        color: red;
+        float: left;
+        margin-right: 4px;
+      }
+
+      p.first-line::first-line {
+        color: blue;
+        font-weight: bold;
+      }
+
+      p.selection::selection {
+        background-color: orange;
+        color: white;
+      }
+
+      input::placeholder {
+        color: lightcoral;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo Element Selectors</h1>
+
+    <h3>::before</h3>
+    <p class="before-demo">Paragraph with content inserted before it</p>
+    <br />
+
+    <h3>::after</h3>
+    <p class="after-demo">Paragraph with content inserted after it</p>
+    <br />
+
+    <h3>::first-letter</h3>
+    <p class="first-letter">
+      The first letter of this paragraph is large and red.
+    </p>
+    <br />
+
+    <h3>::first-line</h3>
+    <p class="first-line">
+      This is the first line — it is blue and bold.<br />
+      This is the second line — not styled.
+    </p>
+    <br />
+
+    <h3>::selection</h3>
+    <p class="selection">
+      Select this text with your mouse to see orange highlight.
+    </p>
+    <br />
+
+    <h3>::placeholder</h3>
+    <input type="text" placeholder="Placeholder is red italic" />
+  </body>
+</html>

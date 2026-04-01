@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid black;
+        padding: 10px;
+      }
+
+      .left {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .logo-icon {
+        font-size: 24px;
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+        padding: 5px;
+      }
+
+      .search input {
+        border: none;
+        outline: none;
+        padding: 5px;
+      }
+
+      .right {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .logout {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      button {
+        padding: 6px 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left">
+        <i class="fa-solid fa-user logo-icon"></i>
+
+        <button>HOME</button>
+        <button>CONTACT</button>
+      </div>
+
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search..." />
+      </div>
+
+      <div class="right">
+        <button class="logout">
+          <i class="fa-solid fa-user"></i>
+          Logout
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

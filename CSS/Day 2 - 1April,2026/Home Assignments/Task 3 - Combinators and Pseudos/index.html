@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinators & Pseudos</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #fff;
+        font-family: Georgia, serif;
+        padding: 30px;
+      }
+
+      h1 {
+        display: inline-flex;
+        font: italic 900 52px/1 Georgia;
+        margin-bottom: 40px;
+      }
+
+      h1 span {
+        color: #1a0a00;
+        padding: 6px 8px;
+      }
+
+      .cyan {
+        background: #00e5cc;
+      }
+
+      .red {
+        background: #e8212b;
+        padding: 6px 4px;
+      }
+
+      .pink {
+        background: #cc0080;
+      }
+
+      ul {
+        padding-left: 40px;
+        counter-reset: i;
+      }
+
+      li {
+        counter-increment: i;
+        font: 700 22px Georgia;
+        margin: 12px 0;
+        list-style: disc;
+      }
+
+      li span {
+        position: relative;
+        display: inline-block;
+      }
+
+      li:nth-child(odd) span {
+        color: #c0392b;
+      }
+
+      li:nth-child(even) span {
+        color: #8e44ad;
+      }
+
+      li span::after {
+        content: "";
+        position: absolute;
+        bottom: calc(100% + 6px);
+        left: 0;
+        background: #111;
+        color: #fff;
+        font: 600 13px Arial;
+        padding: 5px 10px;
+        border-radius: 6px;
+        opacity: 0;
+        transform: translateY(4px);
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
+        white-space: nowrap;
+        pointer-events: none;
+      }
+
+      li:nth-child(odd) span::after {
+        content: "Odd — Item " counter(i);
+      }
+
+      li:nth-child(even) span::after {
+        content: "Even — Item " counter(i);
+      }
+
+      li span:hover::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>
+      <span class="cyan">Combinators</span>
+      <span class="red">&amp;</span>
+      <span class="pink">Pseudos Task</span>
+    </h1>
+
+    <ul>
+      <li><span>Item1</span></li>
+      <li><span>Item2</span></li>
+      <li><span>Item3</span></li>
+      <li><span>Item4</span></li>
+      <li><span>Item5</span></li>
+      <li><span>Item6</span></li>
+    </ul>
+  </body>
+</html>

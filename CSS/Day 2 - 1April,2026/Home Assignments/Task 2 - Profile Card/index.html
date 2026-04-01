@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #e8ecf4;
+        font-family: "DM Sans", sans-serif;
+      }
+
+      .card {
+        width: 420px;
+        padding: 48px 44px 40px;
+        background: #fff;
+        border-radius: 28px;
+        text-align: center;
+        box-shadow:
+          0 8px 40px rgba(0, 0, 0, 0.08),
+          0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+
+      .avatar {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 28px;
+      }
+
+      .avatar::before {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        background: conic-gradient(#6c63ff, #a78bfa, #6c63ff);
+      }
+
+      .avatar::after {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        border-radius: 50%;
+        background: #fff;
+        z-index: 1;
+      }
+
+      .avatar div {
+        position: absolute;
+        inset: 5px;
+        border-radius: 50%;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #c4b5fd, #818cf8);
+        color: #fff;
+        font-size: 44px;
+      }
+
+      .name {
+        font:
+          700 26px "Sora",
+          sans-serif;
+        color: #1a1a2e;
+        margin-bottom: 14px;
+      }
+
+      .bio {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #6b7280;
+        max-width: 310px;
+        margin: 0 auto 32px;
+      }
+
+      .divider {
+        height: 1px;
+        background: #f0f0f5;
+        margin-bottom: 28px;
+      }
+
+      .stats {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .stat {
+        text-align: center;
+      }
+
+      .stat b {
+        display: block;
+        font:
+          700 22px "Sora",
+          sans-serif;
+        color: #6c63ff;
+      }
+
+      .stat span {
+        font-size: 11px;
+        color: #9ca3af;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="avatar">
+        <div><i class="fa-solid fa-user"></i></div>
+      </div>
+
+      <h1 class="name">Aditya Darda</h1>
+
+      <p class="bio">
+        Senior Software Architect with a passion for building scalable,
+        high-performance systems and mentoring the next generation of
+        developers.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="stats">
+        <div class="stat"><b>12+</b><span>Years XP</span></div>
+        <div class="stat"><b>45</b><span>Projects</span></div>
+        <div class="stat"><b>3.2k</b><span>Stars</span></div>
+      </div>
+    </div>
+  </body>
+</html>

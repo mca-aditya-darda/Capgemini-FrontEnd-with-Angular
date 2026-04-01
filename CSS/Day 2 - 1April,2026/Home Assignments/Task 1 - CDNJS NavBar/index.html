@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CDNjs Navbar</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #2b2b2b;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+
+      nav {
+        height: 56px;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #2f2f2f;
+        border-bottom: 1px solid #3a3a3a;
+      }
+
+      .nav-left,
+      .nav-right,
+      .nav-icons {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-left {
+        gap: 18px;
+      }
+      .nav-icons {
+        gap: 14px;
+      }
+      .nav-right {
+        gap: 28px;
+      }
+
+      .logo {
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        color: #e0e0e0;
+      }
+
+      .logo .bracket {
+        color: #9a9a9a;
+      }
+      .logo .cdn {
+        color: #e05c3a;
+      }
+
+      .nav-icons a,
+      .nav-right a {
+        text-decoration: none;
+        transition: 0.2s;
+      }
+
+      .nav-icons a,
+      .nav-right a {
+        color: #fff;
+      }
+
+      .nav-icons a {
+        font-size: 17px;
+      }
+
+      .nav-right a {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .nav-icons a:hover,
+      .nav-right a:hover {
+        color: #9a9a9a;
+      }
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        background: #4caf50;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 4px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="#" class="logo">
+          <span class="bracket">&lt;</span><span class="cdn">cdn</span>js<span
+            class="bracket"
+            >&gt;</span
+          >
+        </a>
+
+        <div class="nav-icons">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <a href="#">About</a>
+        <a href="#">Libraries</a>
+        <a href="#">API</a>
+        <a href="#">GitHub</a>
+        <a href="#">Status <span class="status-dot"></span></a>
+      </div>
+    </nav>
+  </body>
+</html>

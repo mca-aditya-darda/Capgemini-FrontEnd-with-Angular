@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      input[required] {
+        border: 2px solid red;
+      }
+
+      input[type="text"] {
+        background-color: lightyellow;
+      }
+
+      a[href^="https"] {
+        color: green;
+      }
+
+      a[href$=".pdf"] {
+        color: orange;
+      }
+
+      a[href*="google"] {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Attribute Selectors</h1>
+    <input
+      type="text"
+      required
+      placeholder="required field (red border)"
+    /><br /><br />
+
+    <input type="text" placeholder="type=text (yellow bg)" /><br /><br />
+
+    <a href="https://example.com">https://example.com (green)</a><br />
+    <a href="http://example.com">http://example.com (no style)</a><br /><br />
+
+    <a href="/file.pdf">file.pdf (orange)</a><br /><br />
+
+    <a href="https://google.com">google.com (bold)</a>
+  </body>
+</html>

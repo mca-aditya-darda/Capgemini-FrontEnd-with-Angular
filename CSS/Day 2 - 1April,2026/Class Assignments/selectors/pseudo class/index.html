@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      button:hover {
+        background-color: lightblue;
+      }
+
+      input:focus {
+        outline: 2px solid orange;
+      }
+
+      li:first-child {
+        color: green;
+        font-weight: bold;
+      }
+
+      li:last-child {
+        color: red;
+      }
+
+      li:nth-child(2) {
+        background-color: lightyellow;
+      }
+
+      p:not(.skip) {
+        border-left: 3px solid blue;
+        padding-left: 8px;
+      }
+
+      input[type="checkbox"]:checked + label {
+        color: green;
+        font-weight: bold;
+      }
+
+      input:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo Class Selectors</h1>
+
+    <h3>:hover</h3>
+    <button>Hover me (turns blue)</button><br /><br />
+
+    <h3>:focus</h3>
+    <input type="text" placeholder="Click me (orange outline)" /><br /><br />
+
+    <h3>:first-child / :last-child / :nth-child(2)</h3>
+    <ul>
+      <li>Item 1 — first-child (green bold)</li>
+      <li>Item 2 — nth-child(2) (yellow bg)</li>
+      <li>Item 3</li>
+      <li>Item 4 — last-child (red)</li>
+    </ul>
+    <br />
+
+    <h3>:not(.skip)</h3>
+    <p>This p gets blue left border</p>
+    <p class="skip">This p is skipped (has .skip)</p>
+    <br />
+
+    <h3>:checked</h3>
+    <input type="checkbox" id="cb" />
+    <label for="cb">Check me (label turns green)</label><br /><br />
+
+    <h3>:disabled</h3>
+    <input type="text" disabled placeholder="Disabled input (grey)" />
+  </body>
+</html>
