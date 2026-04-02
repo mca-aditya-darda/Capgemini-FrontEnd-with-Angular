@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body > div {
+        height: 400px;
+        width: 400px;
+        display: flex;
+        border: solid 3px red;
+      }
+      div div {
+        height: 100px;
+        width: 100px;
+        border: solid 3px white;
+        background-color: black;
+      }
+
+      @media screen and (max-width: 500px) {
+        body > div {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Position Demo</title>
+
+    <style>
+      body {
+        height: 2000px;
+        font-family: Arial;
+      }
+
+      h2 {
+        margin: 20px;
+      }
+
+      /* Common box */
+      .container {
+        height: 200px;
+        width: 300px;
+        border: 3px solid black;
+        margin: 40px;
+        position: relative;
+      }
+
+      .box {
+        height: 60px;
+        width: 60px;
+        background: red;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* STATIC (default) */
+      .static {
+        position: static;
+        top: 20px; /* ignored */
+        left: 20px; /* ignored */
+      }
+
+      /* RELATIVE */
+      .relative {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        background: blue;
+      }
+
+      /* ABSOLUTE */
+      .absolute {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: green;
+      }
+
+      /* FIXED */
+      .fixed {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: purple;
+      }
+
+      /* STICKY */
+      .sticky {
+        position: sticky;
+        top: 0;
+        background: orange;
+        padding: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Positioning Demo</h1>
+
+    <!-- STATIC -->
+    <h2>Static (default)</h2>
+    <div class="container">
+      <div class="box static">S</div>
+    </div>
+
+    <!-- RELATIVE -->
+    <h2>Relative</h2>
+    <div class="container">
+      <div class="box relative">R</div>
+    </div>
+
+    <!-- ABSOLUTE -->
+    <h2>Absolute</h2>
+    <div class="container">
+      <div class="box absolute">A</div>
+    </div>
+
+    <!-- STICKY -->
+    <div class="sticky">I stick to top when scrolling</div>
+
+    <!-- FIXED -->
+    <div class="box fixed">F</div>
+  </body>
+</html>
