@@ -1,0 +1,15 @@
+<p>first-comp works!</p>
+<h1 [hidden]="isHidden">Component</h1>
+<h2 [style]="style">{{ name }}</h2>
+<button (click)="click()">Toggle</button>
+<br />
+<button (click)="prev()">Prev</button>
+<br />
+<button (click)="next()">Next</button>
+<p>{{ names[index] }}</p>
+<br />
+<!-- <input type="text" (input)="inputValChange($event.target.value)" [value]="ipVal" /> -->
+
+<input type="text" [(ngModel)]="ipVal" />
+<br />
+<p>{{ ipVal }}</p>
