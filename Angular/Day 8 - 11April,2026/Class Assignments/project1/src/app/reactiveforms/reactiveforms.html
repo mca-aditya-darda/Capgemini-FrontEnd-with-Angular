@@ -1,0 +1,63 @@
+<p>reactiveforms works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+  <fieldset>
+    <legend>Login Form</legend>
+    <div>
+      <input type="email" placeholder="Enter email" formControlName="email" />
+      @if (loginForm.controls.email.errors) {
+        <p style="color: red; font-size: xx-small">Enter a valid email</p>
+      }
+    </div>
+    <div><input type="text" placeholder="Enter password" formControlName="password" /></div>
+    @if (loginForm.controls.password.errors?.['minlength']) {
+      <p style="color: red; font-size: xx-small">The minimum length should be of 8 character</p>
+    }
+    <div>
+      <input type="text" placeholder="Confirm password" formControlName="confirmPassword" />
+    </div>
+
+    @if (loginForm.value.password !== loginForm.value.confirmPassword) {
+      <p style="color: red; font-size: xx-small">Password and Confirm Password should match</p>
+    }
+    <div>
+      <select name="Currency" id="" formControlName="currency">
+        <option value="inr">INR</option>
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="male"
+        >Male<input type="radio" name="gender" id="" formControlName="gender" value="male"
+      /></label>
+      <label for="female"
+        >Female<input type="radio" name="gender" id="" formControlName="gender" value="female"
+      /></label>
+      <label for="mix"
+        >Mix<input type="radio" name="gender" id="" formControlName="gender" value="mix"
+      /></label>
+    </div>
+    <div>
+      <label for="cb"
+        >I agree to Terms and Conditions <input type="checkbox" id="cb" formControlName="tandc"
+      /></label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" value="Java" (change)="handleCheckBoxes($event)" /> Java </label
+      ><br />
+
+      <label>
+        <input type="checkbox" value="Python" (change)="handleCheckBoxes($event)" /> Python </label
+      ><br />
+
+      <label>
+        <input type="checkbox" value="HTML" (change)="handleCheckBoxes($event)" /> HTML </label
+      ><br />
+
+      <label> <input type="checkbox" value="CSS" (change)="handleCheckBoxes($event)" /> CSS </label>
+    </div>
+    <button>Login</button>
+  </fieldset>
+</form>
